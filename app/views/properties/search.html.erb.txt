@@ -1,0 +1,12 @@
+<h2>Resultados de búsqueda</h2>
+
+<% @properties.each do |property| %>
+  <div class="property-card">
+    <h3><%= property.title %></h3>
+    <p><strong>Ubicación:</strong> <%= property.location %></p>
+    <p><strong>Disponible desde:</strong> <%= property.available_from %></p>
+    <p><strong>Hasta:</strong> <%= property.available_until %></p>
+    <p><strong>Máx. Huéspedes:</strong> <%= property.max_guests %></p>
+  </div>
+<% end %>
+

@@ -4,7 +4,7 @@
       <h1>Busca alojamientos en 2House</h1>
       <p>Descubre alojamientos enteros y habitaciones ideales para cualquier viaje.</p>
 
-      <%= form_tag "#", method: :get do %>
+      <%= form_tag search_properties_path, method: :get do %>
         <div class="field">
           <label>Ubicación</label>
           <%= text_field_tag :location, nil, placeholder: "Cualquier lugar" %>
