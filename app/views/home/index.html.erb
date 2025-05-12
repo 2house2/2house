@@ -1,2 +1,41 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="main-container">
+  <div class="banner">
+    <div class="search-box">
+      <h1>Busca alojamientos en 2House</h1>
+      <p>Descubre alojamientos enteros y habitaciones ideales para cualquier viaje.</p>
+
+      <%= form_tag "#", method: :get do %>
+        <div class="field">
+          <label>Ubicación</label>
+          <%= text_field_tag :location, nil, placeholder: "Cualquier lugar" %>
+        </div>
+
+        <div class="dates">
+          <div class="field">
+            <label>Llegada</label>
+            <%= date_field_tag :check_in %>
+          </div>
+
+          <div class="field">
+            <label>Salida</label>
+            <%= date_field_tag :check_out %>
+          </div>
+        </div>
+
+        <div class="guests">
+          <div class="field">
+            <label>Adultos</label>
+            <%= number_field_tag :adults, 2, min: 1 %>
+          </div>
+
+          <div class="field">
+            <label>Niños</label>
+            <%= number_field_tag :children, 0, min: 0 %>
+          </div>
+        </div>
+
+        <%= submit_tag "Buscar", class: "btn-search" %>
+      <% end %>
+    </div>
+  </div>
+</div>
