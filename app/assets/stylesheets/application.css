@@ -1,0 +1,35 @@
+/* Colores y estilo base de 2House */
+
+body {
+  background-color: #F2C744; /* Amarillo de fondo */
+  color: #0F3B2E;            /* Texto en verde oscuro */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Enlaces */
+a {
+  color: #0F3B2E;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Botones */
+button {
+  background-color: #0F3B2E;
+  color: #F2C744;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+  color: #0F3B2E;
+}

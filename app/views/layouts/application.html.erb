@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To House App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%#= favicon_link_tag 'favicon.ico', rel: 'shortcut icon', type: 'image/x-icon' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
+</head>
+
+<body>
+  <div style="background-color: #f5f5f5; padding: 15px; text-align: right; font-family: sans-serif;">
+    <% if user_signed_in? %>
+      <span style="margin-right: 10px;">Hola, <%= current_user.email %></span>
+      <%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, style: "color: #004d00; font-weight: bold; text-decoration: none;" %>
+    <% else %>
+      <%= link_to 'Iniciar sesión', new_user_session_path, style: "color: #004d00; margin-right: 10px; font-weight: bold; text-decoration: none;" %>
+      <%= link_to 'Registrarse', new_user_registration_path, style: "color: #004d00; margin-right: 10px; font-weight: bold; text-decoration: none;" %>
+      <%= link_to '¿Olvidaste tu contraseña?', new_user_password_path, style: "color: #cccc00; font-weight: bold; text-decoration: none;" %>
+    <% end %>
+  </div>
+
+  <%= yield %>
+</body>
+</html>
