@@ -1,11 +1,6 @@
 source "https://rubygems.org"
 
 gem "rails", "~> 7.0.4"
-
-group :production do
-  gem "pg"
-end
-
 gem "puma", "~> 5.0"
 gem "sass-rails", ">= 6"
 gem "webpacker", "~> 5.0"
@@ -13,6 +8,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
 gem "bcrypt", "~> 3.1.7"
+gem "pg" # PostgreSQL para producción
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
