@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "rails", "~> 7.0.4"
-gem "pg", "~> 1.4"           # Base de datos para producción (PostgreSQL)
+gem "pg"           # Base de datos para producción (PostgreSQL)
 gem "puma", "~> 5.0"         # Servidor web
 gem "sass-rails", ">= 6"
 gem "webpacker", "~> 5.0"
